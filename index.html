@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Number Generator</title>
+</head>
+
+<body>
+    <header>
+        <!--Company Name-->
+        <h1>
+
+        </h1>
+        <!--Company Logo-->
+        <div>
+
+        </div>
+        <!--Other-->
+        <div>
+
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Project Number Generator</h1>
+            <form action="">
+                <label for="client_name">Enter Client Name</label>
+                <input type="text" name="client_name" id="client_name" placeholder="The Weekend Hack" required>
+                <label for="location_dropdown">Select Client Location</label>
+                <select name="location_dropdown" id="location_dropdown" required>
+                    <option id="location_placeholder">No Location Selected</option>
+                </select>
+                <label for="start_date">Enter Project Starting Date</label>
+                <input type="date" name="start_date" id="start_date" required>
+                <label for="total_job_num">Enter Total Job Number</label>
+                <input type="number" name="total_job_num" id="total_job_num" placeholder='Maximum of 4 digits' required>
+                <button type="button" id="gen_num_button">Generate Project Number</button>
+                
+            </form>
+            <!--Display Country alpha 3 code below-->
+            <h6 id="country_code"></h6>
+            <h2 id="display_project_num"></h2>
+
+            </h4>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

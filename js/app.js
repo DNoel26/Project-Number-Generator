@@ -201,11 +201,13 @@ function init()
 
         console.log("Job Number Changed!");
 
-        if(total_job_num > 9999)
+        if(total_job_num.value > 9999)
         {
-            total_job_num = 9999;
+            total_job_num.value = 9999;
         }
-    })
+
+        total_job_num.value = total_job_num.value.padStart(4, "0");
+    });
 
     //Waits for user to click Generate Project Number
     gen_num_button.addEventListener("click",function(){
@@ -218,7 +220,7 @@ function init()
         console.log(`Selected Job Number is ${total_job_num.value}`);
 
         //Final Generator Output
-        const project_num_code = (`PN-${date_code.toString()}-${client_code}-${country_code}-${total_job_num.value.padStart(4, "0")}`).toString();
+        const project_num_code = (`PN-${date_code.toString()}-${client_code}-${country_code}-${total_job_num.value}`).toString();
         display_project_num.innerHTML = `This Project Number : ${project_num_code}`;
         console.log(`This Project Number : ${project_num_code}`);
     });
